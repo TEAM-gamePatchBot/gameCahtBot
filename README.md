@@ -1,1 +1,1 @@
-# gameCahtBot
+# gameChatBot
