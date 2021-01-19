@@ -144,8 +144,7 @@ config.json
 
 __pycache__
 
-.vscode
+.vscode/
 
 Pipfile
 Pipfile.lock
-ngrok
