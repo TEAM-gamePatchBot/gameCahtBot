@@ -140,7 +140,7 @@ cython_debug/
 # MAC
 .DS_Store
 
-config.json
+# config.json
 
 __pycache__
 
