@@ -137,10 +137,10 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# MAC
+# 한규 폴더 
 .DS_Store
 
-# config.json
+config.json
 
 __pycache__
 
@@ -148,3 +148,4 @@ __pycache__
 
 Pipfile
 Pipfile.lock
+ngrok
