@@ -1,1 +1,1 @@
-web: gunicorn kartpatchalert:app
+web: gunicorn app:app
