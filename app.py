@@ -1,7 +1,7 @@
 """
 도움 받은 사이트
 - https://korchris.github.io/2017/06/29/FB_chatbot/
-- https://stackoverflow.com/questions/10451330/clean-git-repo-on-heroku
+- https://parkdream.tistory.com/96 -> heroku랑 git 연동하는 방법
 """
 
 # -*- coding:utf-8 -*-
