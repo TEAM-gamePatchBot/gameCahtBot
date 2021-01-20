@@ -4,9 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-requests = "*"
+mock = "*"
+gunicorn = "*"
 Flask = "*"
-gevent = "*"
+requests = "*"
 
 [dev-packages]
 

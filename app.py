@@ -1,5 +1,8 @@
-""" 도움 받은 사이트
-https://korchris.github.io/2017/06/29/FB_chatbot/"""
+"""
+도움 받은 사이트
+- https://korchris.github.io/2017/06/29/FB_chatbot/
+- https://stackoverflow.com/questions/10451330/clean-git-repo-on-heroku
+"""
 
 # -*- coding:utf-8 -*-
 from flask import Flask, request
@@ -91,4 +94,4 @@ def hello_pybo():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(threaded=True, port=5000)
