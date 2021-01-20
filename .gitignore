@@ -140,7 +140,7 @@ cython_debug/
 # 한규 폴더 
 .DS_Store
 
-config.json
+# config.json
 
 
 __pycache__
