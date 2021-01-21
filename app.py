@@ -19,6 +19,8 @@ PAGE_ACCESS_TOKEN = config["TOKEN"]["PAGE_ACCESS_TOKEN"]
 VERIFY_TOKEN = config["TOKEN"]["VERIFY_TOKEN"]
 FB_API_URL = "https://graph.facebook.com/v2.6/me/messages"
 
+patch_contents = scraping.kartScraping()
+
 
 def send_message(recipient_id, text):
     """Send a response to Facebook"""
@@ -41,7 +43,7 @@ def get_bot_response(message):
     returning a variation of what the user said.
     Replace this function with one connected to chatbot."""
 
-    return "This is a dummy response to '{}'".format(message)
+    return "\n".join(patch_contents)
 
 
 def verify_webhook(req):
