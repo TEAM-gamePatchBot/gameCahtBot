@@ -1,15 +1,19 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
 
 # import urllib.request
 
 
 def kartScraping():
-    options = webdriver.ChromeOptions()
-    options.add_argument("headless")
-    options.add_argument("window-size=1920x1080")
+    options = Options()
+    options.binary_location = os.environ.get("GOOGLE_CHROME_PATH")
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
     options.add_argument("--disable-gpu")
-
-    driver = webdriver.Chrome("./chromedriver", options=options)
+    driver = webdriver.Chrome(
+        execution_path=str(os.environ.get("CHROMEDRIVER_PATH")), options=options
+    )
     # driver = webdriver.Chrome("/app/.chromedriver/bin/chromedriver", chrome_options=options)
     driver.get("https://kart.nexon.com/Kart/News/Patch/List.aspx?n4pageno=1")
 
