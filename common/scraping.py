@@ -9,9 +9,7 @@ def kartScraping():
     options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-gpu")
-    driver = webdriver.Chrome(
-        execution_path=str(os.environ.get("CHROMEDRIVER_PATH")), options=options
-    )
+    driver = webdriver.Chrome(execution_path=os.environ.get("CHROMEDRIVER_PATH"), options=options)
     driver.get("https://kart.nexon.com/Kart/News/Patch/List.aspx?n4pageno=1")
 
     # 게시판 날짜별 패치 목록
