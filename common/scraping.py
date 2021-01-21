@@ -4,7 +4,7 @@ from selenium import webdriver
 
 
 def kartScraping():
-    driver = webdriver.Chrome("./chromedriver")
+    driver = webdriver.Chrome("/app/.chromedriver/bin/chromedriver")
     driver.get("https://kart.nexon.com/Kart/News/Patch/List.aspx?n4pageno=1")
 
     # 게시판 날짜별 패치 목록
