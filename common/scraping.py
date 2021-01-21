@@ -9,7 +9,8 @@ def kartScraping():
     options.add_argument("window-size=1920x1080")
     options.add_argument("--disable-gpu")
 
-    driver = webdriver.Chrome("/app/.chromedriver/bin/chromedriver", chrome_options=options)
+    driver = webdriver.Chrome("./chromedriver", options=options)
+    # driver = webdriver.Chrome("/app/.chromedriver/bin/chromedriver", chrome_options=options)
     driver.get("https://kart.nexon.com/Kart/News/Patch/List.aspx?n4pageno=1")
 
     # 게시판 날짜별 패치 목록
