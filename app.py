@@ -7,6 +7,7 @@
 # -*- coding:utf-8 -*-
 from flask import Flask, request
 import json, requests
+from common import scraping
 
 # from OpenSSL import SSL  -> 나중에 검수를 받을 때 보안 인증서가 필요하다고 함
 app = Flask(__name__)
@@ -89,7 +90,7 @@ def talk():
 
 
 @app.route("/")
-def hello_pybo():
+def hello():
     return "Hello, World!"
 
 

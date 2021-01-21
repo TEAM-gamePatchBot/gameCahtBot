@@ -8,6 +8,7 @@ mock = "*"
 gunicorn = "*"
 Flask = "*"
 requests = "*"
+selenium = "*"
 
 [dev-packages]
 
