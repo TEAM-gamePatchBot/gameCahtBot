@@ -80,6 +80,7 @@ def listen():
 @app.route("/webhook", methods=["POST"])
 def talk():
     payload = request.get_json()
+    print(payload)
     event = payload["entry"][0]["messaging"]
     for x in event:
         if is_user_message(x):
