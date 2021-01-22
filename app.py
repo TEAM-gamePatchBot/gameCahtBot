@@ -89,10 +89,9 @@ def talk():
     return "ok"
 
 
-@app.route("/", methods=["POST"])
+@app.route("/")
 def hello():
-    send = request.get_json()
-    return send
+    return "send"
 
 
 if __name__ == "__main__":
