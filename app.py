@@ -19,8 +19,6 @@ PAGE_ACCESS_TOKEN = config["TOKEN"]["PAGE_ACCESS_TOKEN"]
 VERIFY_TOKEN = config["TOKEN"]["VERIFY_TOKEN"]
 FB_API_URL = "https://graph.facebook.com/v2.6/me/messages"
 
-patch_contents = scraping.kartScraping()
-
 
 def send_message(recipient_id, text):
     """Send a response to Facebook"""
@@ -42,7 +40,7 @@ def get_bot_response(message):
     """This is just a dummy function,
     returning a variation of what the user said.
     Replace this function with one connected to chatbot."""
-
+    patch_contents = scraping.kartScraping()
     return "\n".join(patch_contents)
 
 
@@ -91,9 +89,10 @@ def talk():
     return "ok"
 
 
-@app.route("/")
+@app.route("/", methods=["POST"])
 def hello():
-    return "Hello, World!"
+    send = request.get_json()
+    return send
 
 
 if __name__ == "__main__":

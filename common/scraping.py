@@ -1,15 +1,15 @@
-import os
+# import os
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 
 
 def kartScraping():
-    options = Options()
-    options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-    options.add_argument("--headless")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-gpu")
-    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=options)
+    # options = webdriver.ChromeOptions()
+    # options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    # options.add_argument("--headless")
+    # options.add_argument("--no-sandbox")
+    # options.add_argument("--disable-gpu")
+    # driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=options)
+    driver = webdriver.Chrome("./chromedriver")
     driver.get("https://kart.nexon.com/Kart/News/Patch/List.aspx?n4pageno=1")
 
     # 게시판 날짜별 패치 목록
@@ -50,6 +50,3 @@ def kartScraping():
 
     driver.quit()
     return patch_contents
-
-
-kartScraping()
