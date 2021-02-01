@@ -9,6 +9,11 @@ gunicorn = "*"
 Flask = "*"
 requests = "*"
 selenium = "*"
+psycopg2-binary = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+flask-script = "*"
+fbmessenger = "*"
 
 [dev-packages]
 
